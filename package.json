@@ -17,41 +17,44 @@
     "resume-test": "node test/test-resume-engine.js",
     "ai-bot-test": "node test/test-ai-bot.js",
     "debug-test.js": "node test/debug-test.js",
+    "debug-jobright-test.js": "node test/debug-jobright-test.js",
     "test-real-apply": "node test/test-real-application.js",
     "test-discover": "node test/test-job-discovery.js",
     "test-dry-run": "node test/test-dry-run.js",
+    "simple-debug.js": "node test/simple-debug.js",
     "simple-test.js": "node test/simple-test.js",
+    "fixed-browser-test.js": "node test/fixed-browser-test.js",
     "test-login-fix.js": "node test/test-login-fix.js",
+    "minimal-stable-test.js": "node test/minimal-stable-test.js",
     "working-test.js": "node test/working-test.js",
+    "firefox-jobright-automation.js": "node test/firefox-jobright-automation.js",
+    "working-jobright-test.js": "node test/working-jobright-test.js",
     "apply-5-jobs": "node test/apply-5-jobs.js",
     "apply-10-jobs": "node test/apply-10-jobs.js",
     "automation-cycle": "node test/automation-cycle.js",
-    
     "jobright-discover": "node test/jobright-discover.js",
     "jobright-apply-one": "node test/jobright-apply-one.js",
     "jobright-apply-batch": "node test/jobright-apply-batch.js",
-    
     "linkedin-apply": "node test/linkedin-apply.js",
     "workday-apply": "node test/workday-apply.js",
-    
     "test-full-flow": "npm run test-discover && npm run test-real-apply",
     "daily-automation": "node automation/daily-run.js",
     "production-run": "NODE_ENV=production node automation/production-run.js"
   },
   "dependencies": {
-    "playwright": "^1.40.0",
-    "openai": "^4.20.0",
-    "express": "^4.18.0",
+    "axios": "^1.6.0",
+    "cheerio": "^1.0.0-rc.12",
     "cors": "^2.8.5",
-    "pg": "^8.11.0",
-    "pdfkit": "^0.13.0",
+    "dotenv": "^16.3.0",
+    "express": "^4.18.0",
     "imap": "^0.8.19",
     "mailparser": "^3.6.0",
     "node-schedule": "^2.1.1",
     "nodemailer": "^6.9.0",
-    "dotenv": "^16.3.0",
-    "axios": "^1.6.0",
-    "cheerio": "^1.0.0-rc.12"
+    "openai": "^4.20.0",
+    "pdfkit": "^0.13.0",
+    "pg": "^8.11.0",
+    "playwright": "^1.40.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.0"
@@ -88,7 +91,11 @@
     "owner": "Vamsidhar Reddy M",
     "email": "vdr1800@gmail.com",
     "target": "H1B Software Engineer Positions",
-    "platforms": ["jobright", "linkedin", "workday"],
+    "platforms": [
+      "jobright",
+      "linkedin",
+      "workday"
+    ],
     "automation": {
       "maxApplicationsPerDay": 30,
       "targetScore": 70,
